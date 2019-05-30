@@ -1,0 +1,87 @@
+<div class="modal-header">
+  <h4 class="modal-title">Questão {{id}} - {{topic}} - {{dificulty}} EDITAR1</h4>
+  <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click edit')">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+<form id="register-form" (ngSubmit)="onSubmit();" [formGroup]='formEditQuestion'>
+<div class="modal-body">
+    <div class="col-md-12 col-sm-12">
+      <div class="block">
+        <div>
+          <div class="alert alert-success" role="alert" *ngIf="msg">
+            Questão atualizada.
+          </div>
+        </div>
+        <div class="form-group">
+          </div>
+        <p style="font-size: 1vw;"><label for="question">Questão</label>
+          <textarea id="question" name="question" type="question"
+            class="form-control"
+            formControlName="question"
+            [ngClass]="{'is-invalid': (submitted || formEditQuestion.get('question').touched) && formEditQuestion.get('question').errors}">
+            {{question}}  
+          </textarea>
+          <span class="invalid-feedback"
+            *ngIf="(submitted || formEditQuestion.get('question').touched) && formEditQuestion.get('question').errors">
+            Questão deve ser preenchida
+          </span></p>
+        <ul class="alternatives">
+          <li><label for="alternative1">Alternativa 1</label>
+            <input id="alternative1" name="alternative1" type="alternative1"
+              class="form-control"
+              formControlName="alternative1"
+              [ngClass]="{'is-invalid': (submitted || formEditQuestion.get('alternative1').touched) && formEditQuestion.get('alternative1').errors}">
+            <span class="invalid-feedback"
+              *ngIf="(submitted || formEditQuestion.get('alternative1').touched) && formEditQuestion.get('alternative1').errors">
+              Alternativa 1 deve ser preenchida
+            </span></li>
+            <br>
+          <li><label for="alternative1">Alternativa 2</label>
+            <input id="alternative2" name="alternative2" type="alternative2"
+              class="form-control"
+              formControlName="alternative2"
+              [ngClass]="{'is-invalid': (submitted || formEditQuestion.get('alternative2').touched) && formEditQuestion.get('alternative2').errors}">
+            <span class="invalid-feedback"
+              *ngIf="(submitted || formEditQuestion.get('alternative2').touched) && formEditQuestion.get('alternative2').errors">
+              Alternativa 2 deve ser preenchida
+            </span></li>
+            <br>
+          <li><label for="alternative3">Alternativa 3</label>
+            <input id="alternative3" name="alternative3" type="alternative3"
+              class="form-control"
+              formControlName="alternative3"
+              [ngClass]="{'is-invalid': (submitted || formEditQuestion.get('alternative3').touched) && formEditQuestion.get('alternative3').errors}">
+            <span class="invalid-feedback"
+              *ngIf="(submitted || formEditQuestion.get('alternative3').touched) && formEditQuestion.get('alternative3').errors">
+              Alternativa 3 deve ser preenchida
+            </span></li>
+            <br>
+          <li><label for="alternative4">Alternativa 4</label>
+            <input id="alternative4" name="alternative4" type="alternative4"x
+              class="form-control"
+              formControlName="alternative4"
+              [ngClass]="{'is-invalid': (submitted || formEditQuestion.get('alternative4').touched) && formEditQuestion.get('alternative4').errors}">
+            <span class="invalid-feedback"
+              *ngIf="(submitted || formEditQuestion.get('alternative4').touched) && formEditQuestion.get('alternative4').errors">
+              Alternativa 4 deve ser preenchido
+            </span></li>
+            <br>
+          <li><label for="alternative5">Alternativa 5</label>
+            <input id="alternative5" name="alternative5" type="alternative5"
+              class="form-control"
+              formControlName="alternative5"
+              [ngClass]="{'is-invalid': (submitted || formEditQuestion.get('alternative5').touched) && formEditQuestion.get('alternative5').errors}">
+            <span class="invalid-feedback"
+              *ngIf="(submitted || formEditQuestion.get('alternative5').touched) && formEditQuestion.get('alternative5').errors">
+              Alternativa 5 deve ser preenchido
+            </span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click edit')">Close</button>
+    <button type="submit" class="btn btn-outline-dark" >Salvar</button>
+  </div>
+</form>

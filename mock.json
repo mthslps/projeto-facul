@@ -1,0 +1,99 @@
+{
+  "questions": [
+    {
+      "id": 34,
+      "question": "Quando foi o descobrimento do brasil?",
+      "imgUrl": null,
+      "topic": "Conhecimentos gerais",
+      "dificulty": "Fácil",
+      "subjectId": 11,
+      "isActive": true,
+      "alternative1": "1500",
+      "alternative2": "1629",
+      "alternative3": "1700",
+      "alternative4": "1992",
+      "alternative5": "2019",
+      "subject": {
+        "id": 11,
+        "name": "Fundamentação Geral",
+        "isActive": true
+      }
+    },
+    {
+      "id": 35,
+      "imgUrl": null,
+      "subjectId": 11,
+      "isActive": true,
+      "subject": {
+        "id": 11,
+        "name": "Fundamentação Geral",
+        "isActive": true
+      },
+      "question": "Segunda pergunta de conhecimentos gerais",
+      "topic": "Conhecimentos gerais",
+      "dificulty": "Fácil",
+      "alternative1": "asdasdas ",
+      "alternative2": "1629",
+      "alternative3": "17asdasdqwqwd00",
+      "alternative4": "dawawwdwda",
+      "alternative5": "2019"
+    },
+    {
+      "id": 36,
+      "question": "Essa pergunta é para ter certeza que voce sabe algo dessa materia especifica. Você sabe?",
+      "imgUrl": null,
+      "topic": "Pergunta Específica",
+      "dificulty": "Fácil",
+      "subjectId": 12,
+      "isActive": true,
+      "alternative1": "22222 ",
+      "alternative2": "3321",
+      "alternative3": "sim",
+      "alternative4": "dawawwdwda",
+      "alternative5": "2019",
+      "subject": {
+        "id": 12,
+        "name": "Específica 1",
+        "isActive": true
+      }
+    },
+    {
+      "id": 37,
+      "question": "Segunda pergunta da materia especifica. Você sabe?",
+      "imgUrl": null,
+      "topic": "Pergunta Específica",
+      "dificulty": "Fácil",
+      "subjectId": 12,
+      "isActive": true,
+      "alternative1": "taokey ",
+      "alternative2": "123456",
+      "alternative3": "sim",
+      "alternative4": "doidera",
+      "alternative5": "2019",
+      "subject": {
+        "id": 12,
+        "name": "Específica 1",
+        "isActive": true
+      }
+    },
+    {
+      "id": 40,
+      "imgUrl": null,
+      "subjectId": 12,
+      "isActive": true,
+      "subject": {
+        "id": 12,
+        "name": "Específica 1",
+        "isActive": true
+      },
+      "question": "[...] A Sabesp, empresa responsável pelo abastecimento na Grande Paulo, informou nesta quinta-feira (23/10) que os dois novos bônus para quem economizar água entrarão em vigor a partir de novembro. O desconto para quem reduzir o gasto em menos de 20% será concedido, portanto, na conta de água do mês de dezembro (URIBE, 2014 p. 1 2013 FOLHA DE SÃO PAULO).  A técnica de Desgin Thinking para geração de ideias e interação entre os participantes pode ajudar no entendimento do problema da falta d'água em Paulo e nas geração de ideias para solucionar ou minimizar o problema. Do que estamos falando:",
+      "topic": "Pergunta Específica",
+      "dificulty": "Fácil",
+      "alternative1": "xurupinga",
+      "alternative2": "alcool zulu",
+      "alternative3": "51",
+      "alternative4": "coca cola",
+      "alternative5": "dolly"
+    }
+  ]
+}

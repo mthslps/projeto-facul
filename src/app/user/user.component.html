@@ -1,0 +1,58 @@
+
+<!-- Totalizador de ofertas -->
+<!-- <section class="section create-user">
+  <div class="col-md-6" style="float: right">
+    <a routerLink="/create-user" target="_blank" class="btn btn-main animated">Cadastrar Usuário</a>
+  </div>
+</section> -->
+
+<section class="section total-frete">
+  <div class="total-frete-label center">
+    <div class="section-title">
+      <label><strong>{{users?.length || '0'}} usuários cadastrados</strong></label>
+      <a target="_self" href="/create-user" class="user-create">Cadastrar Usuário</a>
+    </div>
+  </div>
+</section>
+
+<!-- Service Start -->
+<section class="service">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12 col-lg-4" *ngFor="let user of users">
+        <table class="label-frete">
+          <tr>
+            <td width="110px">
+              <img width="100px" src="assets/images/pergunte-me.jpeg">
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td>
+                    <span>Nome: <b>{{user.name}}</b></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span>Email: <b>{{user.email}}</b></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span>CPF: <b>{{user.cpf}}</b></span>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <span>Telefone: <b>{{user.phone}}</b></span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <hr>
+      </div>
+    </div>
+  </div>
+</section>

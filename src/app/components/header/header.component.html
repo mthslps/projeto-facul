@@ -1,0 +1,26 @@
+<header class="navigation">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- header Nav Start -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" routerLink="/home"><img width="200px" src="assets/images/pergunte-me.jpeg" alt="Logo"></a>
+          <button type="button" class="navbar-toggler" (click)="isCollapsed = !isCollapsed">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isCollapsed">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link" routerLink="/home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="/about">Provas</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="/questions">Questões</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="/subjects">Matérias</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="/courses">Cursos</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="/users">Usuários</a></li>
+              <li class="nav-item"><a class="nav-link" routerLink="/schools">Escolas</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header><!-- header close -->

@@ -1,0 +1,43 @@
+
+<!-- Totalizador de ofertas -->
+<!-- <section class="section create-subject">
+  <div class="col-md-6" style="float: right">
+    <a routerLink="/create-subject" target="_blank" class="btn btn-main animated">Cadastrar Matéria</a>
+  </div>
+</section> -->
+
+<section class="section total-frete">
+  <div class="total-frete-label center">
+    <div class="section-title">
+      <label><strong>{{subjects?.length || '0'}} matérias cadastrados</strong></label>
+      <a target="_self" href="/create-subject" class="subject-create">Cadastrar Matéria</a>
+    </div>
+  </div>
+</section>
+
+<!-- Service Start -->
+<section class="service">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-sm-12 col-lg-4" *ngFor="let subject of subjects">
+        <table class="label-frete">
+          <tr>
+            <td width="110px">
+              <img width="100px" src="assets/images/pergunte-me.jpeg">
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td>
+                    <span>Nome: <b>{{subject.name}}</b></span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <hr>
+      </div>
+    </div>
+  </div>
+</section>

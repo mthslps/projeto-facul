@@ -1,0 +1,64 @@
+.left {
+    margin-top: 10px;
+    float: left;
+    font-weight: bold;
+}
+.center {
+    text-align: center;
+}
+
+.m-t-10{
+    margin-top: 10px;
+}
+.filter-frete{
+    background-color: #ECECEC;   
+}
+.valor-frete {
+    color: green;
+    font-size: 16px;
+}
+.label-frete {
+    cursor: pointer;
+    text-align: left;
+}
+.total-frete{
+    background-color: #0DC458;
+    margin-top: 10px;
+    height: 30px !important;
+    padding: 15px 30px;
+}
+.total-frete-label{
+    margin-top: -10px;
+    color: #ffffff;
+}
+.service div.container{
+    min-height: 500px;
+    max-width: 1400px;
+}
+
+.btn{
+    margin: 10px;
+    width: 20%;
+}
+
+.btn-group.btn-group-toggle{
+    margin-left: 20px;
+}
+
+.typeArrival{
+    width: 100%;
+    margin: 0;
+}
+
+.user-create{
+    position: absolute;
+    color: #ffffff;
+    right: 0;
+    margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+    .btn-actions {
+        width:100%;
+    }
+}
