@@ -10,7 +10,9 @@ import { CreateQuestionComponent } from './create-question/create-question.compo
 import { SubjectComponent } from './subject/subject.component';
 import { CreateSubjectComponent } from './create-subject/create-subject.component';
 import { SchoolComponent } from './school/school.component';
+import { CreateSchoolComponent } from './create-school/create-school.component';
 import { CourseComponent } from './course/course.component';
+import { CreateCourseComponent } from './create-course/create-course.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -21,9 +23,11 @@ const routes: Routes = [
   { path: 'subjects', component: SubjectComponent },
   { path: 'courses' , component: CourseComponent },
   { path: 'questions', component: QuestionComponent },
+  { path: 'create-course', component: CreateCourseComponent},
   { path: 'create-subject', component: CreateSubjectComponent },
   { path: 'create-question', component: CreateQuestionComponent },
   { path: 'schools', component: SchoolComponent },
+  { path: 'create-school', component: CreateSchoolComponent },
   { path: '**', component: Error404Component },
   { path: '**', component: Error404Component },
 ];

@@ -22,4 +22,8 @@ export class SchoolService {
             })
         );
     }
+
+    saveSchool(school) {
+      return this.http.post(this.API + '/schools', school);
+  }
 }

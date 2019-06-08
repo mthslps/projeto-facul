@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators, ValidationErrors } from '@angular/forms';
-import { SubjectService } from '../services/subject.service';
-import {Router} from "@angular/router";
+import { SchoolService } from '../services/school.service';
 
 @Component({
-  selector: 'app-create-subject',
-  templateUrl: './create-subject.component.html',
-  styleUrls: ['./create-subject.component.css']
+  selector: 'app-create-school',
+  templateUrl: './create-school.component.html',
+  styleUrls: ['./create-school.component.css']
 })
-export class CreateSubjectComponent implements OnInit {
+export class CreateSchoolComponent implements OnInit {
 
-  constructor( private fb: FormBuilder, private router: Router, private SubjectService: SubjectService) { }
+  constructor( private fb: FormBuilder,  private SchoolService: SchoolService) { }
 
   submitted: boolean;
   private formCadastro;
@@ -43,13 +42,12 @@ export class CreateSubjectComponent implements OnInit {
 
       console.log(register);
 
-      this.SubjectService.saveSubject(register)
+      this.SchoolService.saveSchool(register)
       .subscribe(
         data => {
           this.submitted = false;
           this.msg = true;
           this.createForm();
-          this.router.navigate(['/subjects']);
         },
         error => {
             console.log('Error', error);

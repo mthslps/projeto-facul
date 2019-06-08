@@ -30,6 +30,9 @@ import { QuestionModalContent } from './question/question-modal.component';
 import { EditQuestionModal } from './question/edit-question-modal.component';
 import { CourseComponent } from './course/course.component';
 import { CreateQuestionComponent } from './create-question/create-question.component';
+import { CreateCourseComponent } from './create-course/create-course.component';
+import { TestComponent } from './test/test.component';
+import { CreateSchoolComponent } from './create-school/create-school.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +52,9 @@ import { CreateQuestionComponent } from './create-question/create-question.compo
     QuestionModalContent,
     CourseComponent,
     CreateQuestionComponent,
+    CreateCourseComponent,
+    TestComponent,
+    CreateSchoolComponent,
   ],
   entryComponents: [QuestionModalContent, EditQuestionModal],
   imports: [

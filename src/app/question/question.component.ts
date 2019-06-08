@@ -41,6 +41,7 @@ export class QuestionComponent implements OnInit {
     const modalRef = this.modalService.open(QuestionModalContent, {size: 'lg'});
     modalRef.componentInstance.data = question;
     modalRef.componentInstance.topic = question.topic;
+    modalRef.componentInstance.imgUrl = question.imgUrl;
     modalRef.componentInstance.question = question.question;
     modalRef.componentInstance.dificulty = question.dificulty;
     modalRef.componentInstance.id = question.id;

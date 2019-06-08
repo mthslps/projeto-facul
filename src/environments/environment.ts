@@ -8,7 +8,9 @@ export const environment = {
   // client_id: 'c79007fe8c6e459eb1649f31800a9f0f',
   // client_secret: '649ac0184E2a4853b1E4Dc36Ea8039F6',
 
-  API_GATEWAY: 'http://localhost:3000'
+  API_GATEWAY:  
+  // 'http://localhost:3000'
+  'https://pergunteme-api.azurewebsites.net/api'
 };
 
 /*

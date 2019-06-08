@@ -9,12 +9,13 @@ import { EditQuestionModal } from './edit-question-modal.component';
     selector: 'ngbd-modal-content',
     template: `
       <div class="modal-header">
-        <h4 class="modal-title">Questão {{id}} - {{topic}} - {{dificulty}}</h4>
+        <h4 class="modal-title">Questão {{id}} - {{topic}} - {{dificulty}} {{data.subject.name}}</h4>
         <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
+      <img [src]="imgUrl" style="max-width:300px;max-height:300px"/>
         <p style="font-size: 1vw;">{{question}}</p>
         <ul class="alternatives">
           <li>A - {{alternative1}}</li>
@@ -35,6 +36,7 @@ import { EditQuestionModal } from './edit-question-modal.component';
     @Input() id;
     @Input() question;
     @Input() topic;
+    @Input() imgUrl;
     @Input() dificulty;
     @Input() alternative1;
     @Input() alternative2;
@@ -48,6 +50,7 @@ import { EditQuestionModal } from './edit-question-modal.component';
         this.activeModal.close('Close click')
         const modalRef = this.modalService.open(EditQuestionModal, {size: 'lg'});
         modalRef.componentInstance.data = question;
+        modalRef.componentInstance.imgUrl = question.imgUrl;
         modalRef.componentInstance.topic = question.topic;
         modalRef.componentInstance.question = question.question;
         modalRef.componentInstance.dificulty = question.dificulty;

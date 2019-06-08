@@ -1,30 +1,39 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators, ValidationErrors } from '@angular/forms';
-import { SubjectService } from '../services/subject.service';
+import { CourseService } from '../services/course.service';
+import { SchoolService } from '../services/school.service';
+import { School } from '../model/school';
 import {Router} from "@angular/router";
 
 @Component({
-  selector: 'app-create-subject',
-  templateUrl: './create-subject.component.html',
-  styleUrls: ['./create-subject.component.css']
+  selector: 'app-create-course',
+  templateUrl: './create-course.component.html',
+  styleUrls: ['./create-course.component.css']
 })
-export class CreateSubjectComponent implements OnInit {
+export class CreateCourseComponent implements OnInit {
 
-  constructor( private fb: FormBuilder, private router: Router, private SubjectService: SubjectService) { }
+  constructor( private fb: FormBuilder, private router: Router, private SchoolService: SchoolService, private CourseService: CourseService) { }
 
   submitted: boolean;
   private formCadastro;
   msg: boolean;
+  schoolList: School[];
 
   ngOnInit() {
     this.createForm();
-
+    this.SchoolService.getSchools().subscribe(dados => this.schoolList = dados);
     this.msg = false;
   }
   createForm() {
     this.formCadastro = this.fb.group({
       name: new FormControl('', Validators.required),
+      schoolId: new FormControl('')
     });
+  }
+  selectedSchool(data){
+    if(data){
+      this.formCadastro.value.schoolId = data.id
+    }
   }
 
   onSubmit() {
@@ -43,13 +52,12 @@ export class CreateSubjectComponent implements OnInit {
 
       console.log(register);
 
-      this.SubjectService.saveSubject(register)
+      this.CourseService.saveCourse(register)
       .subscribe(
         data => {
           this.submitted = false;
           this.msg = true;
           this.createForm();
-          this.router.navigate(['/subjects']);
         },
         error => {
             console.log('Error', error);

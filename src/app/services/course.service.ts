@@ -22,4 +22,8 @@ export class CourseService {
             })
         );
     }
+
+    saveCourse(course) {
+      return this.http.post(this.API + '/courses', course);
+  }
 }

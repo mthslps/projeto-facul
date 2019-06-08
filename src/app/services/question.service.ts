@@ -28,6 +28,6 @@ export class QuestionService {
     }
 
     saveQuestion(question) {
-      return this.http.post(this.API + '/subjects', question);
+      return this.http.post(this.API + '/questions', question);
   }
 }
