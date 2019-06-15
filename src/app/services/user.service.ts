@@ -13,6 +13,7 @@ export class UserService {
     private readonly API = environment.API_GATEWAY;
 
     getUsers() {
+        this.spinner.show();
         return this.http.get<User>(this.API + '/users').pipe(
             map((response: any) => {
                 this.spinner.hide();

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Test } from '../model/test';
+import { TestService } from '../services/test.service';
 
 @Component({
   selector: 'app-test',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestComponent implements OnInit {
 
-  constructor() { }
+  tests: Test[];
+  submitted: boolean;
+  msg: boolean;
+
+  constructor(private TestService: TestService) { }
 
   ngOnInit() {
+    this.TestService.getTests().subscribe(dados => this.tests = dados);
   }
 
 }

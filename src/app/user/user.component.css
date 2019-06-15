@@ -33,6 +33,7 @@
 .service div.container{
     min-height: 500px;
     max-width: 1400px !important;
+    padding-left: 10%;
 }
 
 .btn{

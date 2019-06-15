@@ -15,6 +15,7 @@ export class QuestionService {
     private readonly API = environment.API_GATEWAY;
 
     getQuestions() {
+        this.spinner.show();
         return this.http.get<Question>(this.API + '/questions').pipe(
             map((response: any) => {
                 this.spinner.hide();

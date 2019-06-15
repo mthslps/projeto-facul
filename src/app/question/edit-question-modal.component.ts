@@ -14,6 +14,7 @@ export class EditQuestionModal implements OnInit {
   @Input() id;
   @Input() data;
   @Input() question;
+  @Input() imgUrl;
   @Input() topic;
   @Input() dificulty;
   @Input() alternative1;
@@ -21,6 +22,7 @@ export class EditQuestionModal implements OnInit {
   @Input() alternative3;
   @Input() alternative4;
   @Input() alternative5;
+  @Input() correctAlternative;
   private readonly notifier: NotifierService;
 
   constructor(notifierService: NotifierService,private fb: FormBuilder,private router: Router, public activeModal: NgbActiveModal, private QuestionService: QuestionService) {
@@ -49,6 +51,7 @@ export class EditQuestionModal implements OnInit {
       question: new FormControl('', Validators.required),
       topic: new FormControl('', Validators.required),
       dificulty: new FormControl('', Validators.required),
+      correctAlternative: new FormControl(''),
       alternative1: new FormControl('', Validators.required),
       alternative2: new FormControl('', Validators.required),
       alternative3: new FormControl('', Validators.required),
@@ -91,4 +94,27 @@ export class EditQuestionModal implements OnInit {
     test() {
       this.activeModal.close('Close click')
     }
+    handleInputChange(e) {
+      if(e.target.files[0].size > 1000000){
+        alert('Somente válido imagens com tamanho menor que 1Mb')
+        return false;
+      }else{
+        debugger;
+        var file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
+        var pattern = /image-*/;
+        var reader = new FileReader();
+        if (!file.type.match(pattern)) {
+          alert('Formato invalido');
+          return false;
+        }
+        reader.onload = () => {
+          this.formEditQuestion.value.imgUrl = reader.result
+        }
+      }
+    }
+    // _handleReaderLoaded(e) {
+    //   debugger;
+    //   let reader = e.target;
+    //   this.formEditQuestion.value.imgUrl = reader.result;
+    // }
 }

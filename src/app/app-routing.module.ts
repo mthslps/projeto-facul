@@ -12,11 +12,12 @@ import { CreateSubjectComponent } from './create-subject/create-subject.componen
 import { SchoolComponent } from './school/school.component';
 import { CreateSchoolComponent } from './create-school/create-school.component';
 import { CourseComponent } from './course/course.component';
+import { TestComponent } from './test/test.component';
 import { CreateCourseComponent } from './create-course/create-course.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  { path: '', redirectTo: '/questions', pathMatch: 'full' },
   { path: 'users', component: UserComponent},
   { path: 'create-user', component: CreateUserComponent},
   { path: 'contact', component: ContactComponent },
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'create-subject', component: CreateSubjectComponent },
   { path: 'create-question', component: CreateQuestionComponent },
   { path: 'schools', component: SchoolComponent },
+  { path: 'tests', component: TestComponent },
   { path: 'create-school', component: CreateSchoolComponent },
   { path: '**', component: Error404Component },
   { path: '**', component: Error404Component },

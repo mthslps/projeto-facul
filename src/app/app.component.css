@@ -1,0 +1,9 @@
+.box-upload {
+    min-height: 100px;
+    height: 100%;
+    text-align: center; 
+    border: 1px solid #ced4da;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }

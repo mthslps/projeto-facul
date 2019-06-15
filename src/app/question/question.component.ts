@@ -45,6 +45,7 @@ export class QuestionComponent implements OnInit {
     modalRef.componentInstance.question = question.question;
     modalRef.componentInstance.dificulty = question.dificulty;
     modalRef.componentInstance.id = question.id;
+    modalRef.componentInstance.correctAlternative = question.correctAlternative;
     modalRef.componentInstance.alternative1 = question.alternative1;
     modalRef.componentInstance.alternative2 = question.alternative2;
     modalRef.componentInstance.alternative3 = question.alternative3;

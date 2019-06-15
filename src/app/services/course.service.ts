@@ -15,6 +15,7 @@ export class CourseService {
     private readonly API = environment.API_GATEWAY;
 
     getCourses() {
+      this.spinner.show();
         return this.http.get<Course>(this.API + '/courses').pipe(
             map((response: any) => {
                 this.spinner.hide();

@@ -25,9 +25,10 @@
                     Questão cadastrada.
                   </div>
                 </div>
+                
                 <div class="form-group">
                   <label for="question">Questão</label>
-                  <textarea style="height: 100px;" id="question" name="question" type="text" class="form-control" placeholder="Enunciado"
+                  <textarea style="height: 100px;" id="question" name="question" type="text" class="form-control" placeholder="Escreva o enunciado da questão aqui"
                     formControlName="question"
                     [ngClass]="{'is-invalid': (submitted || formCadastro.get('question').touched) && formCadastro.get('question').errors}"></textarea>
                   <span class="invalid-feedback"
@@ -37,27 +38,20 @@
                 </div>
                 <div class="form-group">
                   <label for="subjectId">Matéria</label>
-                  <!-- <input id="topic" name="topic" type="text" class="form-control"
-                    formControlName="topic"
-                    [ngClass]="{'is-invalid': (submitted || formCadastro.get('topic').touched) && formCadastro.get('topic').errors}">
-                  <span class="invalid-feedback"
-                  *ngIf="(submitted || formCadastro.get('topic').touched) && formCadastro.get('topic').errors?.required">
-                  Tópico deve ser preenchido
-                </span> -->
                 <select class="form-control" [(ngModel)]="selectedSubjectId" formControlName="subjectId" (ngModelChange)="selectedSubject($event)">
                   <option [ngValue]="subject.id" *ngFor="let subject of subjectList">{{subject.name}}</option>
                 </select>
               </div>
-                                      <div class="form-group">
-                                        <label for="topic">Tópico</label>
-                                        <input id="topic" name="topic" type="text" class="form-control"
-                                          formControlName="topic"
-                                          [ngClass]="{'is-invalid': (submitted || formCadastro.get('topic').touched) && formCadastro.get('topic').errors}">
-                                        <span class="invalid-feedback"
-                                          *ngIf="(submitted || formCadastro.get('topic').touched) && formCadastro.get('topic').errors?.required">
-                                          Tópico deve ser preenchido
-                                        </span>
-                                      </div>
+                <div class="form-group">
+                  <label for="topic">Tópico</label>
+                  <input id="topic" name="topic" type="text" class="form-control"
+                    formControlName="topic"
+                    [ngClass]="{'is-invalid': (submitted || formCadastro.get('topic').touched) && formCadastro.get('topic').errors}">
+                  <span class="invalid-feedback"
+                    *ngIf="(submitted || formCadastro.get('topic').touched) && formCadastro.get('topic').errors?.required">
+                    Tópico deve ser preenchido
+                  </span>
+                </div>
                 <div class="form-group">
                   <label for="dificulty">Dificuldade</label>
                   <select id="dificulty" name="dificulty" class="form-control" [(ngModel)]="selectedQuestionDificulty" formControlName="dificulty" (ngModelChange)="selectedDificulty($event)"
@@ -141,10 +135,21 @@
                   Alternativa correta deve ser preenchida
                 </span>
               </div>
-              <div class="image-upload">
-                <img [src]="formCadastro.value.imgUrl" style="max-width:300px;max-height:300px"/>
-                <input name="imgUrl" type="file" accept="image/*" (change)="handleInputChange($event)" />
-              </div> 
+              <label> Cadastrar Imagem </label>
+              <div class="form-group box-upload">
+                  <div class="image-upload">
+                      <img [src]="formCadastro.value.imgUrl" style="max-width:300px;max-height:300px; margin-top: 20px;"/>
+                      <br>
+                      <label for='selecao-arquivo' style='background-color: #30A216;
+                      border-radius: 5px;
+                      color: #fff;
+                      cursor: pointer;
+                      margin: 10px;
+                      padding: 6px 20px'>Selecionar um arquivo &#187;</label>
+                      <input id='selecao-arquivo' name="imgUrl" type="file" style='display:none' accept="image/*" (change)="handleInputChange($event)" />
+                    </div> 
+              </div>
+              
               <div class="center">
                 <button style="margin-top:20px;" type="submit" class="btn btn-main">ENVIAR CADASTRO</button>
               </div>

@@ -1,3 +1,42 @@
-<p>
-  test works!
-</p>
+
+<!-- Totalizador de ofertas -->
+<!-- <section class="section create-subject">
+  <div class="col-md-6" style="float: right">
+    <a routerLink="/create-subject" target="_blank" class="btn btn-main animated">Cadastrar Matéria</a>
+  </div>
+</section> -->
+
+<section class="section total-frete">
+  <div class="total-frete-label center">
+    <div class="section-title">
+      <label><strong>{{tests?.length || '0'}} testes cadastrados</strong></label>
+    </div>
+  </div>
+</section>
+
+<!-- Service Start -->
+<section class="service">
+  <div class="container">
+    <div class="row">
+      <div style='box-shadow: 0px 5px 5px rgba(0,0,0,0.1); margin: 10px; padding: 5px; border-radius: 5px; border: solid #f1eded; border-width: 0.5px;' class="col-md-6 col-sm-12 col-lg-4" *ngFor="let test of tests">
+        <table class="label-frete">
+          <tr>
+            <td width="110px">
+              <img width="100px" src="assets/images/pergunte-me.jpeg">
+            </td>
+            <td>
+              <table>
+                <tr>
+                  <td>
+                    <span>Nome: <b>{{test.name}}</b></span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <hr>
+      </div>
+    </div>
+  </div>
+</section>

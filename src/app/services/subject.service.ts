@@ -15,6 +15,7 @@ export class SubjectService {
     private readonly API = environment.API_GATEWAY;
 
     getSubjects() {
+        this.spinner.show();
         return this.http.get<Subject>(this.API + '/subjects').pipe(
             map((response: any) => {
                 this.spinner.hide();

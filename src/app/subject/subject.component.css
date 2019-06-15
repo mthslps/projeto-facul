@@ -32,6 +32,7 @@
 }
 .service div.container{
     min-height: 500px;
+    padding-left: 10%;
 }
 
 .btn{

@@ -11,4 +11,5 @@ ul li{
 
 div.container{
     min-height: 700px;
+    padding-left: 10%;
 }

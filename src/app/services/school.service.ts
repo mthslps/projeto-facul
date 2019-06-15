@@ -15,6 +15,7 @@ export class SchoolService {
     private readonly API = environment.API_GATEWAY;
 
     getSchools() {
+      this.spinner.show();
         return this.http.get<School>(this.API + '/schools').pipe(
             map((response: any) => {
                 this.spinner.hide();
