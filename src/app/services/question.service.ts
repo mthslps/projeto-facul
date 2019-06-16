@@ -24,11 +24,19 @@ export class QuestionService {
         );
     }
 
-    updateQuestion(question: Question) {
-      return this.http.put(this.API + '/questions/' + question.id, question);
+    updateQuestion(question: Question, document) {
+      debugger;
+      return this.http.put(this.API + '/questions/' + question.id, JSON.stringify({question, document}));
     }
 
     saveQuestion(question) {
       return this.http.post(this.API + '/questions', question);
-  }
+    }
+    bySubjectId(subjectList){
+      return this.http.post(this.API + '/questions/bysubjectid', { 'ids': subjectList}).pipe(
+        map((response: any) => {
+          return response
+        })
+      )
+    }
 }

@@ -14,6 +14,7 @@ import { CreateSchoolComponent } from './create-school/create-school.component';
 import { CourseComponent } from './course/course.component';
 import { TestComponent } from './test/test.component';
 import { CreateCourseComponent } from './create-course/create-course.component';
+import { CreateTestComponent } from './create-test/create-test.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent},
@@ -27,6 +28,7 @@ const routes: Routes = [
   { path: 'create-course', component: CreateCourseComponent},
   { path: 'create-subject', component: CreateSubjectComponent },
   { path: 'create-question', component: CreateQuestionComponent },
+  { path: 'create-test', component: CreateTestComponent },
   { path: 'schools', component: SchoolComponent },
   { path: 'tests', component: TestComponent },
   { path: 'create-school', component: CreateSchoolComponent },

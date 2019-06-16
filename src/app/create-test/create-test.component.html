@@ -1,0 +1,69 @@
+<section class="about section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-sm-12">
+          <div class="block">
+            <div class="section-title center">
+              <h3>Cadastrar prova</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="service">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="block">
+            <form id="test-form" (ngSubmit)="onSubmit();" [formGroup]='formCadastro'>
+              <div class="col-md-12 col-sm-12">
+                <div class="block">
+                    <div class="form-group row" style="margin-left: 10%">
+                      <div class="col-md-6 col-sm-6">
+                        <label for="name">Nome do teste</label>
+                        <input id="name" name="name" type="text" class="form-control"
+                        formControlName="name">
+                      </div>
+                      <div class="col-md-3 col-sm-3">
+                          <label for="dueDate">Data de aplicação do teste</label>
+                          <input id="dueDate" name="dueDate" type="text" mask='00/00/00' class="form-control"
+                          formControlName="dueDate">
+                        </div>
+                    </div>
+                    <br>
+                    <hr>
+                  <div class="form-group row" style="margin-top: 50px; margin-left: 10%;" *ngFor="let subject of subjects; let i = index">
+                    <div class='col-md-6 col-sm-6'>
+                      <label for="subjectId">Matéria</label>
+                      <select class="form-control" (change)="selectedSubject($event, i)">
+                        {{subject.subjectName}}
+                        <option value="" disabled selected>{{subject.subjectName || 'Selecione uma matéria'}}</option>
+                        <option *ngFor="let subjectSelect of subjectList" [ngValue]=subjectSelect.name>{{subjectSelect.name}}</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                      <label>Quantidade de totais de questões: {{subject.maxQuestions}}</label>
+                      <div class="from-group row">
+                        <div class="col-md-6 col-sm-6">
+                          <input class="form-control-range" style="margin-top: 7px;" #ranger type="range" min="1" max="{{subject.maxQuestions}}" 
+                            (input)="selectedSubjectQuestionNumber(ranger.value, i)">
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                          <input type="text" class="rounded" style="width: 100%;" id="display" value={{subject.questionsNumber}} readonly>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="center">
+                    <button style="margin-top:20px;" type="submit" class="btn btn-main">GERAR PROVA</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

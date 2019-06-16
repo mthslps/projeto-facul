@@ -5,6 +5,7 @@ import { NotifierService } from 'angular-notifier';
 import { QuestionService } from '../services/question.service';
 import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { FormBuilder, FormControl, Validators, ValidationErrors } from '@angular/forms';
+import { FileUploader } from 'ng2-file-upload';
 
 @Component({
   selector: 'ngbd-modal-content',
@@ -30,6 +31,7 @@ export class EditQuestionModal implements OnInit {
    }
 
   submitted: boolean;
+  document: any;
   private formEditQuestion;
   msg: boolean;
 
@@ -76,7 +78,7 @@ export class EditQuestionModal implements OnInit {
     if (this.formEditQuestion.valid) {
       const question = this.formEditQuestion.value;
 
-      this.QuestionService.updateQuestion(question)
+      this.QuestionService.updateQuestion(question, this.document)
         .subscribe(
           data => {
             this.submitted = false;
@@ -102,14 +104,11 @@ export class EditQuestionModal implements OnInit {
         debugger;
         var file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
         var pattern = /image-*/;
-        var reader = new FileReader();
         if (!file.type.match(pattern)) {
           alert('Formato invalido');
           return false;
         }
-        reader.onload = () => {
-          this.formEditQuestion.value.imgUrl = reader.result
-        }
+        this.document = file
       }
     }
     // _handleReaderLoaded(e) {

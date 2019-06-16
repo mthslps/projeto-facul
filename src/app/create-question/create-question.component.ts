@@ -68,7 +68,6 @@ export class CreateQuestionComponent implements OnInit {
       alert('Somente válido imagens com tamanho menor que 1Mb')
       return false;
     }else{
-      debugger;
       var file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
       var pattern = /image-*/;
       var reader = new FileReader();

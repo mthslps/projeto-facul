@@ -10,6 +10,7 @@
   <div class="total-frete-label center">
     <div class="section-title">
       <label><strong>{{tests?.length || '0'}} testes cadastrados</strong></label>
+      <a target="_self" href="/create-test" class="test-create">Cadastrar Prova</a>
     </div>
   </div>
 </section>
@@ -31,6 +32,7 @@
                     <span>Nome: <b>{{test.name}}</b></span>
                   </td>
                 </tr>
+                <a href="javascript: void(0);" (click)="generateTest(test.id)">Gerar teste</a>
               </table>
             </td>
           </tr>

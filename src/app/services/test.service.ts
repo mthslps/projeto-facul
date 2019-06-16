@@ -13,6 +13,7 @@ export class TestService {
   constructor(private http: HttpClient, private spinner: NgxSpinnerService) { }
 
   private readonly API = environment.API_GATEWAY;
+  private readonly NGROK = environment.API_NGROK;
 
   getTests() {
     this.spinner.show();
@@ -20,6 +21,18 @@ export class TestService {
       map((response: any) => {
         this.spinner.hide();
         return response ? response : null;
+      })
+    );
+  }
+
+  createTest(test){
+    return this.http.post(this.API + '/tests', test);
+  }
+
+  generateTest(id){
+    return this.http.get(this.NGROK + '/generate-docx/' + id + '/test').pipe(
+      map((response: any) => {
+        return response
       })
     );
   }

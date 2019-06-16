@@ -33,6 +33,8 @@ import { CreateQuestionComponent } from './create-question/create-question.compo
 import { CreateCourseComponent } from './create-course/create-course.component';
 import { TestComponent } from './test/test.component';
 import { CreateSchoolComponent } from './create-school/create-school.component';
+import { FileUploadModule } from 'ng2-file-upload';
+import { CreateTestComponent } from './create-test/create-test.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,7 @@ import { CreateSchoolComponent } from './create-school/create-school.component';
     CreateCourseComponent,
     TestComponent,
     CreateSchoolComponent,
+    CreateTestComponent,
   ],
   entryComponents: [QuestionModalContent, EditQuestionModal],
   imports: [
@@ -68,6 +71,7 @@ import { CreateSchoolComponent } from './create-school/create-school.component';
     AngularFontAwesomeModule,
     FormsModule,
     NotifierModule,
+    FileUploadModule,
     NgSelectModule,
     BsDropdownModule.forRoot(),
    TooltipModule.forRoot(),

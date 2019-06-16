@@ -19,4 +19,8 @@ export class TestComponent implements OnInit {
     this.TestService.getTests().subscribe(dados => this.tests = dados);
   }
 
+  generateTest(id){
+    this.TestService.generateTest(id).subscribe(dados => dados);
+  }
+
 }
