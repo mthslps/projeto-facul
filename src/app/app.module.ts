@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { Error404Component } from './error404/error404.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -16,7 +15,6 @@ import { NotifierModule } from 'angular-notifier';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { UserComponent } from './user/user.component';
 import { FormsModule } from '@angular/forms';
-import { ContactComponent } from './contact/contact.component';
 import { NgSelectModule } from '@ng-select/ng-select';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
@@ -42,10 +40,8 @@ import { CreateTestComponent } from './create-test/create-test.component';
     HeaderComponent,
     AppComponent,
     FooterComponent,
-    HomeComponent,
     Error404Component,
     UserComponent,
-    ContactComponent,
     CreateUserComponent,
     SubjectComponent,
     CreateSubjectComponent,

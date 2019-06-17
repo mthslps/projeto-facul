@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "g2l-webportal": {
+    " pergunteme": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/g2l-webportal",
+            "outputPath": "dist/ pergunteme",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -51,18 +51,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "g2l-webportal:build"
+            "browserTarget": " pergunteme:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "g2l-webportal:build:production"
+              "browserTarget": " pergunteme:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "g2l-webportal:build"
+            "browserTarget": " pergunteme:build"
           }
         },
         "test": {
@@ -96,7 +96,7 @@
         }
       }
     },
-    "g2l-webportal-e2e": {
+    " pergunteme-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -104,11 +104,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "g2l-webportal:serve"
+            "devServerTarget": " pergunteme:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "g2l-webportal:serve:production"
+              "devServerTarget": " pergunteme:serve:production"
             }
           }
         },
@@ -124,5 +124,5 @@
       }
     }
   },
-  "defaultProject": "g2l-webportal"
+  "defaultProject": " pergunteme"
 }
