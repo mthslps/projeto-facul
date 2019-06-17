@@ -17,6 +17,7 @@ export class CreateCourseComponent implements OnInit {
   submitted: boolean;
   public formCadastro;
   msg: boolean;
+  public selectedSchoolId;
   schoolList: School[];
 
   ngOnInit() {

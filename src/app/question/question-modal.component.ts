@@ -46,6 +46,8 @@ import { EditQuestionModal } from './edit-question-modal.component';
     @Input() alternative3;
     @Input() alternative4;
     @Input() alternative5;
+
+    public subject;
   
     constructor(public activeModal: NgbActiveModal,private QuestionService: QuestionService,private zone: NgZone,private router: Router, private modalService: NgbModal) {}
     ngOnInit(){

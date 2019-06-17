@@ -22,6 +22,7 @@ export class CreateQuestionComponent implements OnInit {
   alternativeList: String[];
   public selectedQuestionDificulty;
   public selectedSubjectId;
+  public selectedcorrectAlternative;
 
   ngOnInit() {
     this.createForm();
