@@ -3,5 +3,6 @@ export class Question {
     question: string;
     topic: string;
     difficulty: string;
+    subject: any;
     subjectId: number;
 }
