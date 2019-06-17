@@ -1,0 +1,10 @@
+Baixar npm, baixar o node
+Para mais informações, siga o tutorial: https://blog.teamtreehouse.com/install-node-js-npm-windows
+
+comando no cmd: npm install -g @angular/cli
+
+fazer o comando npm install no cmd aberto apontado para o diretório do projeto
+
+após instalação, fazer o comando ng serve
+
+link da api: https://pergunteme-api.azurewebsites.net/api
