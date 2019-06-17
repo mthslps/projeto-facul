@@ -12,7 +12,7 @@ export const environment = {
   // 'http://localhost:3000'
   'https://pergunteme-api.azurewebsites.net/api',
 
-  API_NGROK: 'http://a245fe72.ngrok.io/'
+  API_NGROK: 'https://a245fe72.ngrok.io/'
 };
 
 /*

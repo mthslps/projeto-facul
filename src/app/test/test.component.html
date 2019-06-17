@@ -32,7 +32,9 @@
                     <span>Nome: <b>{{test.name}}</b></span>
                   </td>
                 </tr>
-                <a href="javascript: void(0);" (click)="generateTest(test.id)">Gerar teste</a>
+                <a href="javascript: void(0);" (click)="generateTestLink(test.id)">Gerar Teste</a>
+                <br>
+                <a href="javascript: void(0);" (click)="generateTemplateLink(test.id)">Gerar Gabarito</a>
               </table>
             </td>
           </tr>

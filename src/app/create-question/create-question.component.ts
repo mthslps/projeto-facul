@@ -60,7 +60,7 @@ export class CreateQuestionComponent implements OnInit {
       arr.splice(10, 1, 'e');
       var result = arr.join("");
       this.formCadastro.value.correctAlternative = result.split(' ').join('').toLowerCase();
-      debugger; 
+        
     }
   }
   handleInputChange(e) {
@@ -80,7 +80,7 @@ export class CreateQuestionComponent implements OnInit {
     }
   }
   _handleReaderLoaded(e) {
-    debugger;
+     
     let reader = e.target;
     this.formCadastro.value.imgUrl = reader.result;
   }
@@ -98,7 +98,7 @@ export class CreateQuestionComponent implements OnInit {
     if (this.formCadastro.valid) {
       const register = this.formCadastro.value;
       console.log(register);
-      debugger;
+       
       register.isActive = true;
       this.QuestionService.saveQuestion(register)
       .subscribe(

@@ -34,6 +34,7 @@ import { CreateCourseComponent } from './create-course/create-course.component';
 import { TestComponent } from './test/test.component';
 import { CreateSchoolComponent } from './create-school/create-school.component';
 import { FileUploadModule } from 'ng2-file-upload';
+import { FileSaverModule } from 'ngx-filesaver';
 import { CreateTestComponent } from './create-test/create-test.component';
 
 @NgModule({
@@ -73,6 +74,7 @@ import { CreateTestComponent } from './create-test/create-test.component';
     NotifierModule,
     FileUploadModule,
     NgSelectModule,
+    FileSaverModule,
     BsDropdownModule.forRoot(),
    TooltipModule.forRoot(),
    ModalModule.forRoot()

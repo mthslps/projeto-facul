@@ -21,19 +21,6 @@ export class CreateTestComponent implements OnInit {
   selectedObject = null;
 
   constructor(private fb: FormBuilder, private TestService: TestService, private router: Router, private SubjectService: SubjectService, private QuestionService: QuestionService) {
-    // this.SubjectService.getSubjects().subscribe({
-    //   next(dados) {
-    //     this.subjectList = dados;
-    //     this.subjectList.forEach(function (subject){
-    //       subjectQuestionIds.push(subject.id)
-    //     })
-    //     this.subjectQuestionArray = subjectQuestionIds;
-    //     this.getSubjectId(this.subjectQuestionArray);
-    //     debugger;
-    //   },
-    //   error(err){console.error('Error: ' + err); },
-    //   complete(){} 
-    // })
     this.SubjectService.getSubjects().subscribe(dados => {
       var subjectQuestionIds = new Array();
       this.subjectList = dados;
@@ -67,7 +54,7 @@ export class CreateTestComponent implements OnInit {
 
   selectedSubject(e, i){
     var selected = this.subjectList.find(item => item.name.trim() === e.target.value);
-    debugger;
+     
     var b = this.subjectQuestionArray.find(item => item.subjectId == selected.id);
     if(b.questionCount == 0){
       alert('Matéria não possui questões')
@@ -76,6 +63,9 @@ export class CreateTestComponent implements OnInit {
     if (this.subjects[i].maxQuestions == 1){
       this.subjects[i].questionsNumber = 1 
     };
+    this.subjectList.forEach( (item, index) => {
+      if(item === selected) this.subjectList.splice(index,1);
+    });
     this.subjects.push({})
   }
   }
@@ -83,7 +73,7 @@ export class CreateTestComponent implements OnInit {
   selectedSubjectQuestionNumber(value, i){
     this.subjects[i].questionsNumber = value;
     console.log(this.subjects[i]);
-    debugger;
+     
   }
 
   onSubmit(){

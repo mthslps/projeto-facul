@@ -25,8 +25,7 @@ export class QuestionService {
     }
 
     updateQuestion(question: Question, document) {
-      debugger;
-      return this.http.put(this.API + '/questions/' + question.id, JSON.stringify({question, document}));
+      return this.http.put(this.API + '/questions/' + question.id, question);
     }
 
     saveQuestion(question) {

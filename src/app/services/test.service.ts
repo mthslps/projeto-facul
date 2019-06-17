@@ -30,11 +30,11 @@ export class TestService {
   }
 
   generateTest(id){
-    return this.http.get(this.NGROK + '/generate-docx/' + id + '/test').pipe(
-      map((response: any) => {
-        return response
-      })
-    );
+    return this.http.get(this.NGROK + 'generate-docx/' + id + '/test', { responseType: 'blob' })
+  }
+
+  generateTemplate(id){
+    return this.http.get(this.NGROK + 'generate-docx/' + id + '/gabarito', { responseType: 'blob' })
   }
 
 }

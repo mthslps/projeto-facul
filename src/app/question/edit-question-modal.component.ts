@@ -36,7 +36,7 @@ export class EditQuestionModal implements OnInit {
   msg: boolean;
 
   ngOnInit() {
-    // debugger;
+    //  
     this.createForm();
     this.notifier.notify( 'success', 'YAAou are awesome! I mean it!' );
 
@@ -101,19 +101,21 @@ export class EditQuestionModal implements OnInit {
         alert('Somente válido imagens com tamanho menor que 1Mb')
         return false;
       }else{
-        debugger;
+         
         var file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
         var pattern = /image-*/;
+        var reader = new FileReader();
         if (!file.type.match(pattern)) {
           alert('Formato invalido');
           return false;
         }
-        this.document = file
+        reader.onload = this._handleReaderLoaded.bind(this);
+        reader.readAsDataURL(file);
       }
     }
-    // _handleReaderLoaded(e) {
-    //   debugger;
-    //   let reader = e.target;
-    //   this.formEditQuestion.value.imgUrl = reader.result;
-    // }
+    _handleReaderLoaded(e) {
+       
+      let reader = e.target;
+      this.formEditQuestion.value.imgUrl = reader.result;
+    }
 }
