@@ -9,7 +9,7 @@ import { EditQuestionModal } from './edit-question-modal.component';
     selector: 'ngbd-modal-content',
     template: `
       <div class="modal-header">
-        <h4 class="modal-title">{{title}} Questão {{id}} - {{topic}} - {{dificulty}} - {{data.subject.name}}</h4>
+        <h4 class="modal-title">Questão {{id}} - {{topic}} - {{dificulty}} - {{data.subject.name}}</h4>
         <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
           <span aria-hidden="true">&times;</span>
         </button>

@@ -16,7 +16,7 @@ import { TestObject } from 'protractor/built/driverProviders';
 export class CreateTestComponent implements OnInit {
   subjectList: Subject[];
   subjectQuestionArray: any[];
-  private formCadastro;
+  public formCadastro;
   subjects: any[] = [];
   selectedObject = null;
 

@@ -15,7 +15,7 @@ export class CreateCourseComponent implements OnInit {
   constructor( private fb: FormBuilder, private router: Router, private SchoolService: SchoolService, private CourseService: CourseService) { }
 
   submitted: boolean;
-  private formCadastro;
+  public formCadastro;
   msg: boolean;
   schoolList: School[];
 

@@ -32,7 +32,7 @@ export class EditQuestionModal implements OnInit {
 
   submitted: boolean;
   document: any;
-  private formEditQuestion;
+  public formEditQuestion;
   msg: boolean;
 
   ngOnInit() {

@@ -13,7 +13,7 @@ export class CreateSubjectComponent implements OnInit {
   constructor( private fb: FormBuilder, private router: Router, private SubjectService: SubjectService) { }
 
   submitted: boolean;
-  private formCadastro;
+  public formCadastro;
   msg: boolean;
 
   ngOnInit() {

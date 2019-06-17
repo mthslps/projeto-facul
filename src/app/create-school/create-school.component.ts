@@ -12,7 +12,7 @@ export class CreateSchoolComponent implements OnInit {
   constructor( private fb: FormBuilder,  private SchoolService: SchoolService) { }
 
   submitted: boolean;
-  private formCadastro;
+  public formCadastro;
   msg: boolean;
 
   ngOnInit() {

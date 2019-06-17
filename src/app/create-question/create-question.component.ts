@@ -15,11 +15,13 @@ export class CreateQuestionComponent implements OnInit {
   constructor( private fb: FormBuilder,  private QuestionService: QuestionService, private router: Router, private SubjectService: SubjectService) { }
 
   submitted: boolean;
-  private formCadastro;
+  public formCadastro;
   msg: boolean;
   subjectList: Subject[];
   dificultyList: String[];
   alternativeList: String[];
+  public selectedQuestionDificulty;
+  public selectedSubjectId;
 
   ngOnInit() {
     this.createForm();

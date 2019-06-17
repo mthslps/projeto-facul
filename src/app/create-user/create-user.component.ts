@@ -12,7 +12,7 @@ export class CreateUserComponent implements OnInit {
   constructor( private fb: FormBuilder,  private UserService: UserService) { }
 
   submitted: boolean;
-  private formCadastro;
+  public formCadastro;
   msg: boolean;
 
   ngOnInit() {
